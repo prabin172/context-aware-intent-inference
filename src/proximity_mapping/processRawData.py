@@ -2,21 +2,41 @@ import os
 import cv2
 import numpy as np
 import csv
+import argparse
 from ultralytics import YOLO
 
-# Folder containing raw data
-raw_data_folder = "../Synced-color-depthPNG/sub3/"
-output_csv_file = "yolov8nFT-conf6-output.csv" # CSV File
+# Command-line arguments
+parser = argparse.ArgumentParser(description="Run YOLO + depth clustering on synced RGB-D PNGs.")
+parser.add_argument("--rgbd_dir", required=True, help="Folder containing color_*.png and depth_*.png files")
+parser.add_argument("--yolo_model", required=True, help="Path to YOLO model weights")
+parser.add_argument("--output_csv", required=True, help="Output detection CSV path")
+parser.add_argument("--conf", type=float, default=0.6, help="YOLO confidence threshold")
+parser.add_argument("--n_clusters", type=int, default=3, help="Number of depth clusters for K-means")
+parser.add_argument("--start_frame", type=int, default=0, help="Starting frame index for quick testing")
+parser.add_argument("--max_frames", type=int, default=None, help="Maximum number of frames to process for quick testing")
+args = parser.parse_args()
 
-# Load YOLOv8 model 
-model = YOLO("yolov8-ex-finetuned.pt")  # This is yolov8n model finetuned on 187 images.
+# Folder containing synced RGB-D PNG data
+raw_data_folder = args.rgbd_dir
+output_csv_file = args.output_csv
 
-# PARAMETER FOR CLUSTERING 
-n_clusters = 3 # Number of depth clusters to use for K-means
+# Load YOLO model
+model = YOLO(args.yolo_model)
+
+# PARAMETER FOR CLUSTERING
+n_clusters = args.n_clusters
 
 # Get all depth and color filenames
 depth_files = sorted([f for f in os.listdir(raw_data_folder) if f.startswith("depth_") and f.endswith(".png")])
 color_files = sorted([f for f in os.listdir(raw_data_folder) if f.startswith("color_") and f.endswith(".png")])
+
+# Optional frame subset for quick testing
+if args.max_frames is not None:
+    depth_files = depth_files[args.start_frame:args.start_frame + args.max_frames]
+    color_files = color_files[args.start_frame:args.start_frame + args.max_frames]
+elif args.start_frame > 0:
+    depth_files = depth_files[args.start_frame:]
+    color_files = color_files[args.start_frame:]
 
 # Ensure corresponding depth and color files exist
 assert len(depth_files) == len(color_files), "Mismatch between depth and color files"
@@ -73,7 +93,7 @@ with open(output_csv_file, mode="w", newline="") as csv_file:
         print(f"Processing frame at time: {timestamp} ms")
 
         # YOLOv8 Inference
-        results = model(color_image, conf=0.6) # Confidence threshold changeable
+        results = model(color_image, conf=args.conf) # Confidence threshold changeable
 
         # Parse YOLO results
         for result in results:
