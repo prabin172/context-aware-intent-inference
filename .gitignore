@@ -7,9 +7,14 @@ venv/
 env/
 
 # Large/raw/intermediate data
+# Data can live inside ./data locally, but should not be pushed.
 data/raw/
 data/external/
 data/intermediate/
+data/Synced-color-depthPNG/
+data/xsens_segments/
+data/trials/
+data/models/
 Data/
 *.bin
 *.mvnx
@@ -21,6 +26,9 @@ Data/
 *.h5
 *.pt
 *.pth
+
+# Allow lightweight data documentation
+!data/README.md
 
 # Images/videos/results
 *.png
