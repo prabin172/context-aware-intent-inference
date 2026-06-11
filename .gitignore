@@ -56,3 +56,6 @@ context-a-if
 data/
 results/proximity/
 logs/
+
+# Generated GR outputs
+results/gr/

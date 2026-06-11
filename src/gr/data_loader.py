@@ -140,6 +140,62 @@ def discover_sessions(trials_root: str | Path = "data/trials"):
     )
 
 
+def subject_from_session(session_id: str) -> str:
+    s = session_id.lower()
+
+    if s.startswith("sub4"):
+        return "sub4"
+    if s.startswith("sub5"):
+        return "sub5"
+    if s.startswith("sub6"):
+        return "sub6"
+    if s.startswith("sub2b"):
+        return "sub2b"
+    if s.startswith("sub3"):
+        return "sub3"
+
+    return session_id
+
+
+def load_all_data_by_subject(
+    target_subject: str = "sub3",
+    joint_angles_root: str | Path = "data/extracted_JointAngles",
+    trials_root: str | Path = "data/trials",
+    merge_sit: bool = True,
+):
+    sessions = discover_sessions(trials_root)
+
+    train_segments = []
+    train_labels = []
+    test_segments = []
+    test_labels = []
+
+    target_subject = target_subject.lower()
+
+    for session_id in sessions:
+        try:
+            segments, labels = load_session(
+                session_id=session_id,
+                joint_angles_root=joint_angles_root,
+                trials_root=trials_root,
+                merge_sit=merge_sit,
+            )
+        except FileNotFoundError as exc:
+            print(f"Skipping {session_id}: {exc}")
+            continue
+
+        subject = subject_from_session(session_id)
+
+        if subject == target_subject:
+            test_segments.extend(segments)
+            test_labels.extend(labels)
+        else:
+            train_segments.extend(segments)
+            train_labels.extend(labels)
+
+    return (train_segments, train_labels), (test_segments, test_labels)
+
+
 def load_all_data(
     test_session: str = "sub3",
     joint_angles_root: str | Path = "data/extracted_JointAngles",
@@ -181,16 +237,25 @@ if __name__ == "__main__":
     parser = argparse.ArgumentParser(description="Build GR training windows from Xsens joint angles and trial CSVs.")
     parser.add_argument("--joint_angles_root", default="data/extracted_JointAngles")
     parser.add_argument("--trials_root", default="data/trials")
-    parser.add_argument("--test_session", default="sub3")
+    parser.add_argument("--test_session", default=None, help="Optional held-out session for debugging")
+    parser.add_argument("--target_subject", default="sub3", help="Held-out subject for subject-level training")
     parser.add_argument("--no_merge_sit", action="store_true", help="Keep Sit-on-chair/couch/table separate instead of merging to Sit.")
     args = parser.parse_args()
 
-    (X_train, y_train), (X_test, y_test) = load_all_data(
-        test_session=args.test_session,
-        joint_angles_root=args.joint_angles_root,
-        trials_root=args.trials_root,
-        merge_sit=not args.no_merge_sit,
-    )
+    if args.test_session:
+        (X_train, y_train), (X_test, y_test) = load_all_data(
+            test_session=args.test_session,
+            joint_angles_root=args.joint_angles_root,
+            trials_root=args.trials_root,
+            merge_sit=not args.no_merge_sit,
+        )
+    else:
+        (X_train, y_train), (X_test, y_test) = load_all_data_by_subject(
+            target_subject=args.target_subject,
+            joint_angles_root=args.joint_angles_root,
+            trials_root=args.trials_root,
+            merge_sit=not args.no_merge_sit,
+        )
 
     print(f"Train segments: {len(X_train)}")
     print(f"Test segments: {len(X_test)}")
