@@ -76,6 +76,23 @@ def extract_training_windows_for_trial(
     return segments, labels
 
 
+def resolve_case_insensitive_file(root: Path, expected_name: str) -> Path:
+    direct = root / expected_name
+    if direct.exists():
+        return direct
+
+    expected_lower = expected_name.lower()
+    matches = [p for p in root.glob("*") if p.name.lower() == expected_lower]
+
+    if len(matches) == 1:
+        return matches[0]
+
+    if len(matches) > 1:
+        raise FileNotFoundError(f"Multiple case-insensitive matches for {expected_name}: {matches}")
+
+    raise FileNotFoundError(f"Missing file: {direct}")
+
+
 def load_session(
     session_id: str,
     joint_angles_root: str | Path = "data/extracted_JointAngles",
@@ -85,14 +102,8 @@ def load_session(
     joint_angles_root = Path(joint_angles_root)
     trials_root = Path(trials_root)
 
-    ja_csv = joint_angles_root / f"{session_id}_ja.csv"
-    trials_csv = trials_root / f"{session_id}_trials.csv"
-
-    if not ja_csv.exists():
-        raise FileNotFoundError(f"Missing joint-angle CSV: {ja_csv}")
-
-    if not trials_csv.exists():
-        raise FileNotFoundError(f"Missing trials CSV: {trials_csv}")
+    ja_csv = resolve_case_insensitive_file(joint_angles_root, f"{session_id}_ja.csv")
+    trials_csv = resolve_case_insensitive_file(trials_root, f"{session_id}_trials.csv")
 
     motion_df = pd.read_csv(ja_csv)
     trials_df = pd.read_csv(trials_csv)
