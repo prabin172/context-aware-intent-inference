@@ -36,6 +36,7 @@ for SUBJECT in "${SUBJECTS[@]}"; do
       --target_subject "${SUBJECT}" \
       --epochs "${EPOCHS_BASE}" \
       --output_dir "${BASE_DIR}" \
+      --no_merge_sit \
       2>&1 | tee "logs/gr_base_${SUBJECT}.log"
   fi
 
@@ -49,6 +50,7 @@ for SUBJECT in "${SUBJECTS[@]}"; do
       --split_csv "${SPLIT_CSV}" \
       --output_dir "${FINETUNE_DIR}" \
       --epochs "${EPOCHS_FINETUNE}" \
+      --no_merge_sit \
       2>&1 | tee "logs/gr_finetune_${SUBJECT}.log"
   fi
 
