@@ -62,3 +62,11 @@ results/gr/
 
 # Generated evaluation outputs
 results/evaluation/
+
+# Generated Bayesian Fusion outputs
+results/bayesian_fusion/
+
+# Generated ablation outputs
+results/proximity_ablation/
+results/bayesian_fusion_ablation/
+results/evaluation_ablation/
