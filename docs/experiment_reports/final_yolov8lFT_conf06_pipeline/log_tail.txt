@@ -1,0 +1,500 @@
+Trial 53 (GT: backpack): Nearest detected at 3000ms: backpack (Dist: 0.19m). Match: True
+Trial 54 (GT: chair): Nearest detected at 3000ms: chair (Dist: 0.78m). Match: True
+Trial 55 (GT: couch): Nearest detected at 3000ms: couch (Dist: 0.26m). Match: True
+Trial 56 (GT: dining table): Nearest detected at 3000ms: chair (Dist: 0.34m). Match: False
+Trial 57 (GT: backpack): Nearest detected at 3000ms: couch (Dist: 0.49m). Match: False
+Trial 58 (GT: chair): Nearest detected at 3000ms: chair (Dist: 0.22m). Match: True
+Trial 59 (GT: couch): Nearest detected at 3000ms: couch (Dist: 0.10m). Match: True
+Trial 60 (GT: dining table): Nearest detected at 3000ms: chair (Dist: 0.72m). Match: False
+Trial 61 (GT: backpack): Nearest detected at 3000ms: backpack (Dist: 0.18m). Match: True
+Trial 62 (GT: chair): Nearest detected at 3000ms: dining table (Dist: 0.42m). Match: False
+Trial 63 (GT: couch): Nearest detected at 3000ms: couch (Dist: 0.32m). Match: True
+Trial 64 (GT: dining table): Nearest detected at 3000ms: dining table (Dist: 0.38m). Match: True
+Trial 65 (GT: backpack): Nearest detected at 3000ms: couch (Dist: 0.84m). Match: False
+Trial 66 (GT: chair): Nearest detected at 3000ms: chair (Dist: 0.21m). Match: True
+Trial 67 (GT: couch): Nearest detected at 3000ms: couch (Dist: 0.10m). Match: True
+Trial 68 (GT: dining table): Nearest detected at 3000ms: chair (Dist: 0.75m). Match: False
+Trial 69 (GT: backpack): Nearest detected at 3000ms: couch (Dist: 0.30m). Match: False
+Trial 70 (GT: chair): Nearest detected at 3000ms: chair (Dist: 0.42m). Match: True
+Trial 71 (GT: couch): Nearest detected at 3000ms: couch (Dist: 0.20m). Match: True
+Trial 72 (GT: dining table): Nearest detected at 3000ms: dining table (Dist: 0.37m). Match: True
+Trial 73 (GT: backpack): Nearest detected at 3000ms: couch (Dist: 0.74m). Match: False
+Trial 74 (GT: chair): Nearest detected at 3000ms: chair (Dist: 0.51m). Match: True
+Trial 75 (GT: couch): Nearest detected at 3000ms: couch (Dist: 0.07m). Match: True
+Trial 76 (GT: dining table): Nearest detected at 3000ms: chair (Dist: 0.82m). Match: False
+Trial 77 (GT: backpack): Nearest detected at 3000ms: backpack (Dist: 0.17m). Match: True
+Trial 78 (GT: chair): Nearest detected at 3000ms: dining table (Dist: 0.40m). Match: False
+Trial 79 (GT: couch): Nearest detected at 3000ms: couch (Dist: 0.25m). Match: True
+Trial 80 (GT: dining table): Nearest detected at 3000ms: chair (Dist: 0.32m). Match: False
+Trial 81 (GT: backpack): Nearest detected at 3000ms: backpack (Dist: 0.35m). Match: True
+Normalize time
+✅ Processed data with relative timestamps and selected columns saved as results/proximity/Sub6-bi-005/proximity.csv
+DONE: results/proximity/Sub6-bi-005/proximity.csv
+
+------------------------------------------------------------
+Proximity session: Sub6-bi-006
+------------------------------------------------------------
+Extract object depths by trial
+✅ Object positions saved in results/proximity/Sub6-bi-006/object_positions_by_trial.csv
+Map human-object distances
+/home/ptimilsina/projects/context-aware-intent-inference/src/proximity_mapping/mapper.py:201: UserWarning: No artists with labels found to put in legend.  Note that artists whose label start with an underscore are ignored when legend() is called with no argument.
+  plt.legend(loc='best')
+Processing Trial 1 (Sit-on-chair). Ground Truth Object: chair...
+✅ Saved plot for Trial 1, Gesture: Sit-on-chair
+Processing Trial 2 (Sit-on-couch). Ground Truth Object: couch...
+✅ Saved plot for Trial 2, Gesture: Sit-on-couch
+Processing Trial 3 (Sit-on-table). Ground Truth Object: dining table...
+✅ Saved plot for Trial 3, Gesture: Sit-on-table
+Processing Trial 4 (Pick-up-backpack). Ground Truth Object: backpack...
+✅ Saved plot for Trial 4, Gesture: Pick-up-backpack
+Processing Trial 5 (Push-chair). Ground Truth Object: chair...
+✅ Saved plot for Trial 5, Gesture: Push-chair
+Processing Trial 6 (Stand-on-couch). Ground Truth Object: couch...
+✅ Saved plot for Trial 6, Gesture: Stand-on-couch
+Processing Trial 7 (Clean-table). Ground Truth Object: dining table...
+✅ Saved plot for Trial 7, Gesture: Clean-table
+Processing Trial 8 (Wear-backpack). Ground Truth Object: backpack...
+✅ Saved plot for Trial 8, Gesture: Wear-backpack
+Processing Trial 9 (Sit-on-chair). Ground Truth Object: chair...
+✅ Saved plot for Trial 9, Gesture: Sit-on-chair
+Processing Trial 10 (Sit-on-couch). Ground Truth Object: couch...
+✅ Saved plot for Trial 10, Gesture: Sit-on-couch
+Processing Trial 11 (Sit-on-table). Ground Truth Object: dining table...
+✅ Saved plot for Trial 11, Gesture: Sit-on-table
+Processing Trial 12 (Pick-up-backpack). Ground Truth Object: backpack...
+✅ Saved plot for Trial 12, Gesture: Pick-up-backpack
+Processing Trial 13 (Push-chair). Ground Truth Object: chair...
+✅ Saved plot for Trial 13, Gesture: Push-chair
+Processing Trial 14 (Stand-on-couch). Ground Truth Object: couch...
+✅ Saved plot for Trial 14, Gesture: Stand-on-couch
+Processing Trial 15 (Clean-table). Ground Truth Object: dining table...
+✅ Saved plot for Trial 15, Gesture: Clean-table
+Processing Trial 16 (Wear-backpack). Ground Truth Object: backpack...
+✅ Saved plot for Trial 16, Gesture: Wear-backpack
+Processing Trial 17 (Sit-on-chair). Ground Truth Object: chair...
+✅ Saved plot for Trial 17, Gesture: Sit-on-chair
+Processing Trial 18 (Sit-on-couch). Ground Truth Object: couch...
+✅ Saved plot for Trial 18, Gesture: Sit-on-couch
+Processing Trial 19 (Sit-on-table). Ground Truth Object: dining table...
+✅ Saved plot for Trial 19, Gesture: Sit-on-table
+Processing Trial 20 (Pick-up-backpack). Ground Truth Object: backpack...
+✅ Saved plot for Trial 20, Gesture: Pick-up-backpack
+Processing Trial 21 (Push-chair). Ground Truth Object: chair...
+✅ Saved plot for Trial 21, Gesture: Push-chair
+Processing Trial 22 (Stand-on-couch). Ground Truth Object: couch...
+✅ Saved plot for Trial 22, Gesture: Stand-on-couch
+Processing Trial 23 (Clean-table). Ground Truth Object: dining table...
+✅ Saved plot for Trial 23, Gesture: Clean-table
+Processing Trial 24 (Wear-backpack). Ground Truth Object: backpack...
+✅ Saved plot for Trial 24, Gesture: Wear-backpack
+Processing Trial 25 (Sit-on-chair). Ground Truth Object: chair...
+✅ Saved plot for Trial 25, Gesture: Sit-on-chair
+Processing Trial 26 (Sit-on-couch). Ground Truth Object: couch...
+✅ Saved plot for Trial 26, Gesture: Sit-on-couch
+Processing Trial 27 (Sit-on-table). Ground Truth Object: dining table...
+✅ Saved plot for Trial 27, Gesture: Sit-on-table
+Processing Trial 28 (Pick-up-backpack). Ground Truth Object: backpack...
+✅ Saved plot for Trial 28, Gesture: Pick-up-backpack
+Processing Trial 29 (Push-chair). Ground Truth Object: chair...
+✅ Saved plot for Trial 29, Gesture: Push-chair
+Processing Trial 30 (Stand-on-couch). Ground Truth Object: couch...
+✅ Saved plot for Trial 30, Gesture: Stand-on-couch
+Processing Trial 31 (Clean-table). Ground Truth Object: dining table...
+✅ Saved plot for Trial 31, Gesture: Clean-table
+Processing Trial 32 (Wear-backpack). Ground Truth Object: backpack...
+✅ Saved plot for Trial 32, Gesture: Wear-backpack
+Processing Trial 33 (Sit-on-chair). Ground Truth Object: chair...
+✅ Saved plot for Trial 33, Gesture: Sit-on-chair
+Processing Trial 34 (Sit-on-couch). Ground Truth Object: couch...
+✅ Saved plot for Trial 34, Gesture: Sit-on-couch
+Processing Trial 35 (Sit-on-table). Ground Truth Object: dining table...
+✅ Saved plot for Trial 35, Gesture: Sit-on-table
+Processing Trial 36 (Pick-up-backpack). Ground Truth Object: backpack...
+✅ Saved plot for Trial 36, Gesture: Pick-up-backpack
+Processing Trial 37 (Push-chair). Ground Truth Object: chair...
+✅ Saved plot for Trial 37, Gesture: Push-chair
+Processing Trial 38 (Stand-on-couch). Ground Truth Object: couch...
+✅ Saved plot for Trial 38, Gesture: Stand-on-couch
+Processing Trial 39 (Clean-table). Ground Truth Object: dining table...
+✅ Saved plot for Trial 39, Gesture: Clean-table
+Processing Trial 40 (Wear-backpack). Ground Truth Object: backpack...
+✅ Saved plot for Trial 40, Gesture: Wear-backpack
+Processing Trial 41 (Sit-on-chair). Ground Truth Object: chair...
+✅ Saved plot for Trial 41, Gesture: Sit-on-chair
+Processing Trial 42 (Sit-on-couch). Ground Truth Object: couch...
+✅ Saved plot for Trial 42, Gesture: Sit-on-couch
+Processing Trial 43 (Sit-on-table). Ground Truth Object: dining table...
+✅ Saved plot for Trial 43, Gesture: Sit-on-table
+Processing Trial 44 (Pick-up-backpack). Ground Truth Object: backpack...
+✅ Saved plot for Trial 44, Gesture: Pick-up-backpack
+Processing Trial 45 (Push-chair). Ground Truth Object: chair...
+✅ Saved plot for Trial 45, Gesture: Push-chair
+Processing Trial 46 (Stand-on-couch). Ground Truth Object: couch...
+✅ Saved plot for Trial 46, Gesture: Stand-on-couch
+Processing Trial 47 (Clean-table). Ground Truth Object: dining table...
+✅ Saved plot for Trial 47, Gesture: Clean-table
+Processing Trial 48 (Wear-backpack). Ground Truth Object: backpack...
+✅ Saved plot for Trial 48, Gesture: Wear-backpack
+Processing Trial 49 (Sit-on-chair). Ground Truth Object: chair...
+✅ Saved plot for Trial 49, Gesture: Sit-on-chair
+Processing Trial 50 (Sit-on-couch). Ground Truth Object: couch...
+✅ Saved plot for Trial 50, Gesture: Sit-on-couch
+Processing Trial 51 (Sit-on-table). Ground Truth Object: dining table...
+✅ Saved plot for Trial 51, Gesture: Sit-on-table
+Processing Trial 52 (Pick-up-backpack). Ground Truth Object: backpack...
+✅ Saved plot for Trial 52, Gesture: Pick-up-backpack
+Processing Trial 53 (Push-chair). Ground Truth Object: chair...
+✅ Saved plot for Trial 53, Gesture: Push-chair
+Processing Trial 54 (Stand-on-couch). Ground Truth Object: couch...
+✅ Saved plot for Trial 54, Gesture: Stand-on-couch
+Processing Trial 55 (Clean-table). Ground Truth Object: dining table...
+✅ Saved plot for Trial 55, Gesture: Clean-table
+Processing Trial 56 (Pick-up-backpack). Ground Truth Object: backpack...
+✅ Saved plot for Trial 56, Gesture: Pick-up-backpack
+Processing Trial 57 (Sit-on-chair). Ground Truth Object: chair...
+✅ Saved plot for Trial 57, Gesture: Sit-on-chair
+Processing Trial 58 (Sit-on-couch). Ground Truth Object: couch...
+✅ Saved plot for Trial 58, Gesture: Sit-on-couch
+Processing Trial 59 (Sit-on-table). Ground Truth Object: dining table...
+✅ Saved plot for Trial 59, Gesture: Sit-on-table
+Processing Trial 60 (Wear-backpack). Ground Truth Object: backpack...
+✅ Saved plot for Trial 60, Gesture: Wear-backpack
+Processing Trial 61 (Push-chair). Ground Truth Object: chair...
+✅ Saved plot for Trial 61, Gesture: Push-chair
+Processing Trial 62 (Stand-on-couch). Ground Truth Object: couch...
+✅ Saved plot for Trial 62, Gesture: Stand-on-couch
+Processing Trial 63 (Clean-table). Ground Truth Object: dining table...
+✅ Saved plot for Trial 63, Gesture: Clean-table
+Processing Trial 64 (Wear-backpack). Ground Truth Object: backpack...
+✅ Saved plot for Trial 64, Gesture: Wear-backpack
+Processing Trial 65 (Sit-on-chair). Ground Truth Object: chair...
+✅ Saved plot for Trial 65, Gesture: Sit-on-chair
+Processing Trial 66 (Sit-on-couch). Ground Truth Object: couch...
+✅ Saved plot for Trial 66, Gesture: Sit-on-couch
+Processing Trial 67 (Sit-on-table). Ground Truth Object: dining table...
+✅ Saved plot for Trial 67, Gesture: Sit-on-table
+Processing Trial 68 (Pick-up-backpack). Ground Truth Object: backpack...
+✅ Saved plot for Trial 68, Gesture: Pick-up-backpack
+Processing Trial 69 (Push-chair). Ground Truth Object: chair...
+✅ Saved plot for Trial 69, Gesture: Push-chair
+Processing Trial 70 (Stand-on-couch). Ground Truth Object: couch...
+✅ Saved plot for Trial 70, Gesture: Stand-on-couch
+Processing Trial 71 (Clean-table). Ground Truth Object: dining table...
+✅ Saved plot for Trial 71, Gesture: Clean-table
+Processing Trial 72 (Wear-backpack). Ground Truth Object: backpack...
+✅ Saved plot for Trial 72, Gesture: Wear-backpack
+Processing Trial 73 (Sit-on-chair). Ground Truth Object: chair...
+✅ Saved plot for Trial 73, Gesture: Sit-on-chair
+Processing Trial 74 (Sit-on-couch). Ground Truth Object: couch...
+✅ Saved plot for Trial 74, Gesture: Sit-on-couch
+Processing Trial 75 (Sit-on-table). Ground Truth Object: dining table...
+✅ Saved plot for Trial 75, Gesture: Sit-on-table
+Processing Trial 76 (Pick-up-backpack). Ground Truth Object: backpack...
+✅ Saved plot for Trial 76, Gesture: Pick-up-backpack
+Processing Trial 77 (Push-chair). Ground Truth Object: chair...
+✅ Saved plot for Trial 77, Gesture: Push-chair
+Processing Trial 78 (Stand-on-couch). Ground Truth Object: couch...
+✅ Saved plot for Trial 78, Gesture: Stand-on-couch
+Processing Trial 79 (Clean-table). Ground Truth Object: dining table...
+✅ Saved plot for Trial 79, Gesture: Clean-table
+Processing Trial 80 (Wear-backpack). Ground Truth Object: backpack...
+✅ Saved plot for Trial 80, Gesture: Wear-backpack
+Processing Trial 81 (Sit-on-chair). Ground Truth Object: chair...
+✅ Saved plot for Trial 81, Gesture: Sit-on-chair
+Processing Trial 82 (Sit-on-couch). Ground Truth Object: couch...
+✅ Saved plot for Trial 82, Gesture: Sit-on-couch
+Processing Trial 83 (Sit-on-table). Ground Truth Object: dining table...
+✅ Saved plot for Trial 83, Gesture: Sit-on-table
+Processing Trial 84 (Pick-up-backpack). Ground Truth Object: backpack...
+✅ Saved plot for Trial 84, Gesture: Pick-up-backpack
+Processing Trial 85 (Push-chair). Ground Truth Object: chair...
+✅ Saved plot for Trial 85, Gesture: Push-chair
+Processing Trial 86 (Stand-on-couch). Ground Truth Object: couch...
+✅ Saved plot for Trial 86, Gesture: Stand-on-couch
+Processing Trial 87 (Clean-table). Ground Truth Object: dining table...
+✅ Saved plot for Trial 87, Gesture: Clean-table
+Processing Trial 88 (Wear-backpack). Ground Truth Object: backpack...
+✅ Saved plot for Trial 88, Gesture: Wear-backpack
+Processing Trial 89 (Sit-on-chair). Ground Truth Object: chair...
+✅ Saved plot for Trial 89, Gesture: Sit-on-chair
+Processing Trial 90 (Sit-on-couch). Ground Truth Object: couch...
+✅ Saved plot for Trial 90, Gesture: Sit-on-couch
+Processing Trial 91 (Sit-on-table). Ground Truth Object: dining table...
+✅ Saved plot for Trial 91, Gesture: Sit-on-table
+Processing Trial 92 (Pick-up-backpack). Ground Truth Object: backpack...
+✅ Saved plot for Trial 92, Gesture: Pick-up-backpack
+Processing Trial 93 (Push-chair). Ground Truth Object: chair...
+✅ Saved plot for Trial 93, Gesture: Push-chair
+Processing Trial 94 (Stand-on-couch). Ground Truth Object: couch...
+✅ Saved plot for Trial 94, Gesture: Stand-on-couch
+Processing Trial 95 (Clean-table). Ground Truth Object: dining table...
+✅ Saved plot for Trial 95, Gesture: Clean-table
+Processing Trial 96 (Wear-backpack). Ground Truth Object: backpack...
+✅ Saved plot for Trial 96, Gesture: Wear-backpack
+Processing Trial 97 (Sit-on-chair). Ground Truth Object: chair...
+✅ Saved plot for Trial 97, Gesture: Sit-on-chair
+Processing Trial 98 (Sit-on-couch). Ground Truth Object: couch...
+✅ Saved plot for Trial 98, Gesture: Sit-on-couch
+Processing Trial 99 (Sit-on-table). Ground Truth Object: dining table...
+✅ Saved plot for Trial 99, Gesture: Sit-on-table
+Processing Trial 100 (Pick-up-backpack). Ground Truth Object: backpack...
+✅ Saved plot for Trial 100, Gesture: Pick-up-backpack
+Processing Trial 101 (Push-chair). Ground Truth Object: chair...
+✅ Saved plot for Trial 101, Gesture: Push-chair
+Processing Trial 102 (Stand-on-couch). Ground Truth Object: couch...
+✅ Saved plot for Trial 102, Gesture: Stand-on-couch
+Processing Trial 103 (Clean-table). Ground Truth Object: dining table...
+✅ Saved plot for Trial 103, Gesture: Clean-table
+Processing Trial 104 (Wear-backpack). Ground Truth Object: backpack...
+✅ Saved plot for Trial 104, Gesture: Wear-backpack
+Processing Trial 105 (Sit-on-chair). Ground Truth Object: chair...
+✅ Saved plot for Trial 105, Gesture: Sit-on-chair
+Processing Trial 106 (Sit-on-couch). Ground Truth Object: couch...
+✅ Saved plot for Trial 106, Gesture: Sit-on-couch
+Processing Trial 107 (Sit-on-table). Ground Truth Object: dining table...
+✅ Saved plot for Trial 107, Gesture: Sit-on-table
+Processing Trial 108 (Pick-up-backpack). Ground Truth Object: backpack...
+✅ Saved plot for Trial 108, Gesture: Pick-up-backpack
+Processing Trial 109 (Sit-on-chair). Ground Truth Object: chair...
+✅ Saved plot for Trial 109, Gesture: Sit-on-chair
+Processing Trial 110 (Stand-on-couch). Ground Truth Object: couch...
+✅ Saved plot for Trial 110, Gesture: Stand-on-couch
+Processing Trial 111 (Clean-table). Ground Truth Object: dining table...
+✅ Saved plot for Trial 111, Gesture: Clean-table
+Processing Trial 112 (Wear-backpack). Ground Truth Object: backpack...
+✅ Saved plot for Trial 112, Gesture: Wear-backpack
+Processing Trial 113 (Push-chair). Ground Truth Object: chair...
+✅ Saved plot for Trial 113, Gesture: Push-chair
+Processing Trial 114 (Sit-on-couch). Ground Truth Object: couch...
+✅ Saved plot for Trial 114, Gesture: Sit-on-couch
+Processing Trial 115 (Sit-on-table). Ground Truth Object: dining table...
+✅ Saved plot for Trial 115, Gesture: Sit-on-table
+Processing Trial 116 (Pick-up-backpack). Ground Truth Object: backpack...
+✅ Saved plot for Trial 116, Gesture: Pick-up-backpack
+Processing Trial 117 (Push-chair). Ground Truth Object: chair...
+✅ Saved plot for Trial 117, Gesture: Push-chair
+Processing Trial 118 (Stand-on-couch). Ground Truth Object: couch...
+✅ Saved plot for Trial 118, Gesture: Stand-on-couch
+Processing Trial 119 (Clean-table). Ground Truth Object: dining table...
+✅ Saved plot for Trial 119, Gesture: Clean-table
+Processing Trial 120 (Wear-backpack). Ground Truth Object: backpack...
+✅ Saved plot for Trial 120, Gesture: Wear-backpack
+
+✅ All distances computed, CSV saved successfully as results/proximity/Sub6-bi-006/mapped_distances_by_trial.csv!
+
+--- Running Validation Check at 3000ms ---
+Trial 16 (GT: backpack): Nearest detected at 3000ms: None Detected (Dist: infm). Match: False
+Trial 17 (GT: chair): Nearest detected at 3000ms: dining table (Dist: 0.15m). Match: False
+Trial 18 (GT: couch): Nearest detected at 3000ms: couch (Dist: 0.35m). Match: True
+Trial 19 (GT: dining table): Nearest detected at 3000ms: chair (Dist: 1.10m). Match: False
+Trial 20 (GT: backpack): Nearest detected at 3000ms: chair (Dist: 0.30m). Match: False
+Trial 21 (GT: chair): Nearest detected at 3000ms: chair (Dist: 0.44m). Match: True
+Trial 22 (GT: couch): Nearest detected at 3000ms: None Detected (Dist: infm). Match: False
+Trial 23 (GT: dining table): Nearest detected at 3000ms: dining table (Dist: 0.24m). Match: True
+Trial 24 (GT: backpack): Nearest detected at 3000ms: couch (Dist: 0.40m). Match: False
+Trial 25 (GT: chair): Nearest detected at 3000ms: chair (Dist: 0.20m). Match: True
+Trial 26 (GT: couch): Nearest detected at 3000ms: couch (Dist: 0.24m). Match: True
+Trial 27 (GT: dining table): Nearest detected at 3000ms: backpack (Dist: 1.12m). Match: False
+Trial 28 (GT: backpack): Nearest detected at 3000ms: chair (Dist: 0.12m). Match: False
+Trial 29 (GT: chair): Nearest detected at 3000ms: chair (Dist: 0.45m). Match: True
+Trial 30 (GT: couch): Nearest detected at 3000ms: couch (Dist: 0.50m). Match: True
+Trial 31 (GT: dining table): Nearest detected at 3000ms: dining table (Dist: 0.34m). Match: True
+Trial 32 (GT: backpack): Nearest detected at 3000ms: couch (Dist: 0.43m). Match: False
+Trial 33 (GT: chair): Nearest detected at 3000ms: chair (Dist: 0.21m). Match: True
+Trial 34 (GT: couch): Nearest detected at 3000ms: couch (Dist: 0.20m). Match: True
+Trial 35 (GT: dining table): Nearest detected at 3000ms: chair (Dist: 0.23m). Match: False
+Trial 36 (GT: backpack): Nearest detected at 3000ms: couch (Dist: 0.22m). Match: False
+Trial 37 (GT: chair): Nearest detected at 3000ms: chair (Dist: 0.42m). Match: True
+Trial 38 (GT: couch): Nearest detected at 3000ms: couch (Dist: 0.32m). Match: True
+Trial 39 (GT: dining table): Nearest detected at 3000ms: chair (Dist: 0.32m). Match: False
+Trial 40 (GT: backpack): Nearest detected at 3000ms: couch (Dist: 0.83m). Match: False
+Trial 41 (GT: chair): Nearest detected at 3000ms: dining table (Dist: 0.14m). Match: False
+Trial 42 (GT: couch): Nearest detected at 3000ms: couch (Dist: 0.24m). Match: True
+Trial 43 (GT: dining table): Nearest detected at 3000ms: couch (Dist: 3.88m). Match: False
+Trial 44 (GT: backpack): Nearest detected at 3000ms: backpack (Dist: 0.31m). Match: True
+Trial 45 (GT: chair): Nearest detected at 3000ms: chair (Dist: 0.47m). Match: True
+Trial 46 (GT: couch): Nearest detected at 3000ms: couch (Dist: 0.04m). Match: True
+Trial 47 (GT: dining table): Nearest detected at 3000ms: dining table (Dist: 0.40m). Match: True
+Trial 48 (GT: backpack): Nearest detected at 3000ms: couch (Dist: 0.89m). Match: False
+Trial 49 (GT: chair): Nearest detected at 3000ms: chair (Dist: 0.16m). Match: True
+Trial 50 (GT: couch): Nearest detected at 3000ms: couch (Dist: 0.19m). Match: True
+Trial 51 (GT: dining table): Nearest detected at 3000ms: chair (Dist: 1.20m). Match: False
+Trial 52 (GT: backpack): Nearest detected at 3000ms: backpack (Dist: 0.36m). Match: True
+Trial 53 (GT: chair): Nearest detected at 3000ms: chair (Dist: 1.76m). Match: True
+Trial 54 (GT: couch): Nearest detected at 3000ms: couch (Dist: 0.32m). Match: True
+Trial 55 (GT: dining table): Nearest detected at 3000ms: chair (Dist: 0.40m). Match: False
+Trial 56 (GT: backpack): Nearest detected at 3000ms: backpack (Dist: 0.33m). Match: True
+Trial 57 (GT: chair): Nearest detected at 3000ms: chair (Dist: 0.24m). Match: True
+Trial 58 (GT: couch): Nearest detected at 3000ms: couch (Dist: 0.24m). Match: True
+Trial 59 (GT: dining table): Nearest detected at 3000ms: dining table (Dist: 0.28m). Match: True
+Trial 60 (GT: backpack): Nearest detected at 3000ms: couch (Dist: 0.26m). Match: False
+Trial 61 (GT: chair): Nearest detected at 3000ms: chair (Dist: 0.45m). Match: True
+Trial 62 (GT: couch): Nearest detected at 3000ms: dining table (Dist: 0.54m). Match: False
+Trial 63 (GT: dining table): Nearest detected at 3000ms: chair (Dist: 0.34m). Match: False
+Trial 64 (GT: backpack): Nearest detected at 3000ms: chair (Dist: 0.71m). Match: False
+Trial 65 (GT: chair): Nearest detected at 3000ms: dining table (Dist: 0.05m). Match: False
+Trial 66 (GT: couch): Nearest detected at 3000ms: couch (Dist: 0.35m). Match: True
+Trial 67 (GT: dining table): Nearest detected at 3000ms: chair (Dist: 1.08m). Match: False
+Trial 68 (GT: backpack): Nearest detected at 3000ms: backpack (Dist: 0.34m). Match: True
+Trial 69 (GT: chair): Nearest detected at 3000ms: chair (Dist: 0.49m). Match: True
+Trial 70 (GT: couch): Nearest detected at 3000ms: couch (Dist: 0.49m). Match: True
+Trial 71 (GT: dining table): Nearest detected at 3000ms: dining table (Dist: 0.38m). Match: True
+Trial 72 (GT: backpack): Nearest detected at 3000ms: couch (Dist: 0.39m). Match: False
+Trial 73 (GT: chair): Nearest detected at 3000ms: chair (Dist: 0.28m). Match: True
+Trial 74 (GT: couch): Nearest detected at 3000ms: couch (Dist: 0.31m). Match: True
+Trial 75 (GT: dining table): Nearest detected at 3000ms: chair (Dist: 1.13m). Match: False
+Trial 76 (GT: backpack): Nearest detected at 3000ms: backpack (Dist: 0.22m). Match: True
+Trial 77 (GT: chair): Nearest detected at 3000ms: chair (Dist: 0.44m). Match: True
+Trial 78 (GT: couch): Nearest detected at 3000ms: couch (Dist: 0.06m). Match: True
+Trial 79 (GT: dining table): Nearest detected at 3000ms: couch (Dist: 0.33m). Match: False
+Trial 80 (GT: backpack): Nearest detected at 3000ms: couch (Dist: 0.72m). Match: False
+Trial 81 (GT: chair): Nearest detected at 3000ms: chair (Dist: 0.18m). Match: True
+Trial 82 (GT: couch): Nearest detected at 3000ms: couch (Dist: 0.25m). Match: True
+Trial 83 (GT: dining table): Nearest detected at 3000ms: chair (Dist: 1.21m). Match: False
+Trial 84 (GT: backpack): Nearest detected at 3000ms: backpack (Dist: 0.22m). Match: True
+Trial 85 (GT: chair): Nearest detected at 3000ms: chair (Dist: 0.43m). Match: True
+Trial 86 (GT: couch): Nearest detected at 3000ms: couch (Dist: 0.11m). Match: True
+Trial 87 (GT: dining table): Nearest detected at 3000ms: couch (Dist: 0.31m). Match: False
+Trial 88 (GT: backpack): Nearest detected at 3000ms: couch (Dist: 0.64m). Match: False
+Trial 89 (GT: chair): Nearest detected at 3000ms: dining table (Dist: 0.07m). Match: False
+Trial 90 (GT: couch): Nearest detected at 3000ms: couch (Dist: 0.33m). Match: True
+Trial 91 (GT: dining table): Nearest detected at 3000ms: chair (Dist: 0.64m). Match: False
+Trial 92 (GT: backpack): Nearest detected at 3000ms: backpack (Dist: 0.40m). Match: True
+Trial 93 (GT: chair): Nearest detected at 3000ms: chair (Dist: 0.20m). Match: True
+Trial 94 (GT: couch): Nearest detected at 3000ms: couch (Dist: 0.13m). Match: True
+Trial 95 (GT: dining table): Nearest detected at 3000ms: dining table (Dist: 0.34m). Match: True
+Trial 96 (GT: backpack): Nearest detected at 3000ms: None Detected (Dist: infm). Match: False
+Trial 97 (GT: chair): Nearest detected at 3000ms: chair (Dist: 0.01m). Match: True
+Trial 98 (GT: couch): Nearest detected at 3000ms: couch (Dist: 0.30m). Match: True
+Trial 99 (GT: dining table): Nearest detected at 3000ms: dining table (Dist: 0.48m). Match: True
+Trial 100 (GT: backpack): Nearest detected at 3000ms: couch (Dist: 0.58m). Match: False
+Trial 101 (GT: chair): Nearest detected at 3000ms: chair (Dist: 0.53m). Match: True
+Trial 102 (GT: couch): Nearest detected at 3000ms: couch (Dist: 0.24m). Match: True
+Trial 103 (GT: dining table): Nearest detected at 3000ms: dining table (Dist: 0.31m). Match: True
+Trial 104 (GT: backpack): Nearest detected at 3000ms: couch (Dist: 0.57m). Match: False
+Trial 105 (GT: chair): Nearest detected at 3000ms: dining table (Dist: 0.06m). Match: False
+Trial 106 (GT: couch): Nearest detected at 3000ms: couch (Dist: 0.18m). Match: True
+Trial 107 (GT: dining table): Nearest detected at 3000ms: chair (Dist: 0.94m). Match: False
+Trial 108 (GT: backpack): Nearest detected at 3000ms: couch (Dist: 0.46m). Match: False
+Trial 109 (GT: chair): Nearest detected at 3000ms: dining table (Dist: 0.07m). Match: False
+Trial 110 (GT: couch): Nearest detected at 3000ms: couch (Dist: 0.24m). Match: True
+Trial 111 (GT: dining table): Nearest detected at 3000ms: chair (Dist: 0.36m). Match: False
+Trial 112 (GT: backpack): Nearest detected at 3000ms: couch (Dist: 0.69m). Match: False
+Trial 113 (GT: chair): Nearest detected at 3000ms: chair (Dist: 0.49m). Match: True
+Trial 114 (GT: couch): Nearest detected at 3000ms: couch (Dist: 0.22m). Match: True
+Trial 115 (GT: dining table): Nearest detected at 3000ms: dining table (Dist: 0.21m). Match: True
+Trial 116 (GT: backpack): Nearest detected at 3000ms: backpack (Dist: 0.51m). Match: True
+Trial 117 (GT: chair): Nearest detected at 3000ms: chair (Dist: 0.22m). Match: True
+Trial 118 (GT: couch): Nearest detected at 3000ms: couch (Dist: 0.50m). Match: True
+Trial 119 (GT: dining table): Nearest detected at 3000ms: dining table (Dist: 0.41m). Match: True
+Trial 120 (GT: backpack): Nearest detected at 3000ms: couch (Dist: 0.67m). Match: False
+Normalize time
+✅ Processed data with relative timestamps and selected columns saved as results/proximity/Sub6-bi-006/proximity.csv
+DONE: results/proximity/Sub6-bi-006/proximity.csv
+
+Step 4: Proximity coverage summary
+    session   rows  trials  time_min  time_max  Chair_non_null  Chair_nan  Couch_non_null  Couch_nan  Table_non_null  Table_nan  Backpack_non_null  Backpack_nan
+Sub6-bi-001   6879       8       0.0    3500.0        0.358628   0.641372        0.546591   0.453409        0.457479   0.542521           0.127780      0.872220
+Sub6-bi-002   6851       8       0.0    3500.0        0.385345   0.614655        0.564297   0.435703        0.217341   0.782659           0.080718      0.919282
+Sub6-bi-003  68437      80       0.0    3500.0        0.356649   0.643351        0.520055   0.479945        0.213379   0.786621           0.203603      0.796397
+Sub6-bi-004   6854       8       0.0    3500.0        0.582142   0.417858        0.530201   0.469799        0.306682   0.693318           0.106361      0.893639
+Sub6-bi-005  69412      81       0.0    3500.0        0.394644   0.605356        0.528266   0.471734        0.205800   0.794200           0.215539      0.784461
+Sub6-bi-006 102811     120       0.0    3500.0        0.364552   0.635448        0.506638   0.493362        0.290650   0.709350           0.155402      0.844598
+      sub2b  96797     112       0.0    3500.0        0.390312   0.609688        0.527103   0.472897        0.380084   0.619916           0.419001      0.580999
+       sub3  90460     105       0.0    3500.0        0.391035   0.608965        0.517643   0.482357        0.315012   0.684988           0.366692      0.633308
+   sub4-001  27411      33       0.0    3500.0        0.372113   0.627887        0.397176   0.602824        0.236620   0.763380           0.449965      0.550035
+   sub4-002  41485      81       0.0    3500.0        0.407955   0.592045        0.354803   0.645197        0.309413   0.690587           0.310642      0.689358
+   sub4-003  68425      80       0.0    3500.0        0.416032   0.583968        0.374278   0.625722        0.278422   0.721578           0.321666      0.678334
+   sub4-004 103702     121       0.0    3500.0        0.543162   0.456838        0.420580   0.579420        0.309830   0.690170           0.404033      0.595967
+ sub5-b-002  82743      96       0.0    3500.0        0.524165   0.475835        0.477164   0.522836        0.397967   0.602033           0.501408      0.498592
+ sub5-b-003  69621      81       0.0    3500.0        0.452048   0.547952        0.453757   0.546243        0.346964   0.653036           0.469830      0.530170
+ sub5-b-004 110260     128       0.0    3500.0        0.486759   0.513241        0.535008   0.464992        0.351614   0.648386           0.488972      0.511028
+
+Saved: results/proximity/proximity_coverage_summary.csv
+
+Step 5: Run Bayesian Fusion for all subjects
+Bayesian Fusion configuration
+Intents: ['Clean-table', 'Nothing', 'Pick-up-backpack', 'Push-chair', 'Sit-on-chair', 'Sit-on-couch', 'Sit-on-table', 'Stand-on-couch', 'Wear-backpack']
+Prior: uniform over intents
+Gesture CPT: match=0.60, non-match=0.05
+Related object likelihoods: near=0.70, midway=0.20, far=0.08, invisible=0.02
+Unrelated object likelihood: uniform 0.25
+
+Subject: sub2b
+Reading GR predictions: results/gr/inference_sub2b/gr_predictions_all_test_trials.csv
+  Merging session sub2b with results/proximity/sub2b/proximity.csv
+Saved merged BF inputs: results/bayesian_fusion/merged_inputs_sub2b.csv
+Saved BF predictions: results/bayesian_fusion/inference_sub2b/bf_predictions_all_test_trials.csv
+Rows: 57630
+Trials: 96
+
+Subject: sub3
+Reading GR predictions: results/gr/inference_sub3/gr_predictions_all_test_trials.csv
+  Merging session sub3 with results/proximity/sub3/proximity.csv
+Saved merged BF inputs: results/bayesian_fusion/merged_inputs_sub3.csv
+Saved BF predictions: results/bayesian_fusion/inference_sub3/bf_predictions_all_test_trials.csv
+Rows: 53420
+Trials: 89
+
+Subject: sub4
+Reading GR predictions: results/gr/inference_sub4/gr_predictions_all_test_trials.csv
+  Merging session sub4-001 with results/proximity/sub4-001/proximity.csv
+  Merging session sub4-002 with results/proximity/sub4-002/proximity.csv
+  Merging session sub4-003 with results/proximity/sub4-003/proximity.csv
+  Merging session sub4-004 with results/proximity/sub4-004/proximity.csv
+Saved merged BF inputs: results/bayesian_fusion/merged_inputs_sub4.csv
+Saved BF predictions: results/bayesian_fusion/inference_sub4/bf_predictions_all_test_trials.csv
+Rows: 159102
+Trials: 266
+
+Subject: sub5
+Reading GR predictions: results/gr/inference_sub5/gr_predictions_all_test_trials.csv
+  Merging session sub5-b-002 with results/proximity/sub5-b-002/proximity.csv
+  Merging session sub5-b-003 with results/proximity/sub5-b-003/proximity.csv
+  Merging session sub5-b-004 with results/proximity/sub5-b-004/proximity.csv
+Saved merged BF inputs: results/bayesian_fusion/merged_inputs_sub5.csv
+Saved BF predictions: results/bayesian_fusion/inference_sub5/bf_predictions_all_test_trials.csv
+Rows: 173476
+Trials: 289
+
+Subject: sub6
+Reading GR predictions: results/gr/inference_sub6/gr_predictions_all_test_trials.csv
+  Merging session Sub6-bi-002 with results/proximity/Sub6-bi-002/proximity.csv
+  Merging session Sub6-bi-003 with results/proximity/Sub6-bi-003/proximity.csv
+  Merging session Sub6-bi-004 with results/proximity/Sub6-bi-004/proximity.csv
+  Merging session Sub6-bi-005 with results/proximity/Sub6-bi-005/proximity.csv
+  Merging session Sub6-bi-006 with results/proximity/Sub6-bi-006/proximity.csv
+Saved merged BF inputs: results/bayesian_fusion/merged_inputs_sub6.csv
+Saved BF predictions: results/bayesian_fusion/inference_sub6/bf_predictions_all_test_trials.csv
+Rows: 173466
+Trials: 289
+
+Finished Bayesian Fusion.
+results/bayesian_fusion/inference_sub2b/bf_predictions_all_test_trials.csv
+results/bayesian_fusion/inference_sub3/bf_predictions_all_test_trials.csv
+results/bayesian_fusion/inference_sub4/bf_predictions_all_test_trials.csv
+results/bayesian_fusion/inference_sub5/bf_predictions_all_test_trials.csv
+results/bayesian_fusion/inference_sub6/bf_predictions_all_test_trials.csv
+
+Step 6: Evaluate BF
+Reading: results/bayesian_fusion/inference_sub2b/bf_predictions_all_test_trials.csv
+Reading: results/bayesian_fusion/inference_sub3/bf_predictions_all_test_trials.csv
+Reading: results/bayesian_fusion/inference_sub4/bf_predictions_all_test_trials.csv
+Reading: results/bayesian_fusion/inference_sub5/bf_predictions_all_test_trials.csv
+Reading: results/bayesian_fusion/inference_sub6/bf_predictions_all_test_trials.csv
+
+Overall metrics
+ accuracy  macro_f1  weighted_f1  num_rows  num_trials
+ 0.902498  0.704975     0.895339    617094        1029
+
+Subject metrics
+Subject  accuracy  macro_f1  weighted_f1  num_rows  num_trials
+  sub2b  0.913535  0.742238     0.904121     57630          96
+   sub3  0.911101  0.766848     0.908667     53420          89
+   sub4  0.930095  0.825024     0.931223    159102         266
+   sub5  0.891950  0.650862     0.874606    173476         289
+   sub6  0.881418  0.548256     0.860878    173466         289
+
+Saved evaluation outputs to: results/evaluation
+
+Step 7: Build lightweight GitHub report
