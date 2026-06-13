@@ -70,3 +70,6 @@ results/bayesian_fusion/
 results/proximity_ablation/
 results/bayesian_fusion_ablation/
 results/evaluation_ablation/
+
+# Archived generated outputs
+results/archive/

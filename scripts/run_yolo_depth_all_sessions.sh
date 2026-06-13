@@ -1,7 +1,7 @@
 #!/usr/bin/env bash
 set -e
 
-MODEL="data/models/yolov8-ex-finetuned.pt"
+MODEL="data/models/yolov8lFT.pt"
 RGBD_ROOT="data/Synced-color-depthPNG"
 OUT_ROOT="results/proximity"
 
