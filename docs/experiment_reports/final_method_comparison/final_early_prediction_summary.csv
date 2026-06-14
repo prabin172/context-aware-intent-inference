@@ -1,0 +1,4 @@
+Method,num_final_correct_trials,num_trials_with_sustained_prediction,mean_lead_time_ms,median_lead_time_ms,std_lead_time_ms,min_lead_time_ms,max_lead_time_ms
+BF,872,715,436.5846153846154,404.0,172.97627640794238,200.0,1691.0
+E2E,961,859,410.9662398137369,380.0,162.96224204433028,200.0,1796.0
+GR,792,601,412.5074875207987,373.0,182.13627780824876,201.0,1907.0
