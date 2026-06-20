@@ -73,3 +73,11 @@ results/evaluation_ablation/
 
 # Archived generated outputs
 results/archive/
+
+# Generated E2E Transformer outputs
+results/e2e_transformer/
+results/e2e_transformer_smoke/
+results/evaluation_smoke/
+
+# Generated matched E2E comparison outputs
+results/e2e_transformer_matched_gr/
