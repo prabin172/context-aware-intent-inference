@@ -10,6 +10,8 @@ from matplotlib.patches import Patch
 plt.rcParams["font.family"] = "serif"
 plt.rcParams["font.serif"] = ["Times New Roman", "Times", "DejaVu Serif"]
 plt.rcParams["mathtext.fontset"] = "stix"
+plt.rcParams["pdf.fonttype"] = 42
+plt.rcParams["ps.fonttype"] = 42
 
 REPORT_DIR = Path("docs/experiment_reports/final_method_comparison")
 
@@ -46,10 +48,11 @@ methods = ["GR", "BF", "E2E"]
 colors = {"GR": "#4C97D8", "BF": "#E67E22", "E2E": "#43B581"}
 hatches = {"GR": "///", "BF": "\\\\\\", "E2E": "xxx"}
 
-fig, ax = plt.subplots(figsize=(7.0, 3.6))
+# Slightly compact x spacing between class groups.
+x = np.arange(len(PLOT_ORDER)) * 0.90
+width = 0.26
 
-x = np.arange(len(PLOT_ORDER))
-width = 0.24
+fig, ax = plt.subplots(figsize=(8.2, 4.8))
 
 for i, method in enumerate(methods):
     vals = []
@@ -67,13 +70,23 @@ for i, method in enumerate(methods):
         hatch=hatches[method],
     )
 
-ax.set_title("Per-Class F1-Score Across Three Methods", fontsize=11)
-ax.set_ylabel("F1-Score", fontsize=10)
-ax.set_xlabel("Ground Truth Intent Label", fontsize=10)
+ax.set_title("Per-Class F1-Score Across Three Methods", fontsize=19)
+ax.set_ylabel("F1-Score", fontsize=17)
+ax.set_xlabel("Ground Truth Intent Label", fontsize=17)
 ax.set_ylim(0, 1.05)
+
 ax.set_xticks(x)
-ax.set_xticklabels([DISPLAY_LABELS[c] for c in PLOT_ORDER], rotation=35, ha="right", fontsize=8)
-ax.tick_params(axis="y", labelsize=8)
+ax.set_xticklabels(
+    [DISPLAY_LABELS[c] for c in PLOT_ORDER],
+    rotation=28,
+    ha="right",
+    fontsize=14,
+)
+ax.tick_params(axis="y", labelsize=14)
+
+# Reduce blank space before the first group and after the last group.
+ax.set_xlim(x[0] - 0.45, x[-1] + 0.45)
+
 ax.grid(axis="y", linestyle=":", alpha=0.5)
 
 legend_handles = [
@@ -87,14 +100,14 @@ ax.legend(
     handles=legend_handles,
     ncol=4,
     loc="upper right",
-    fontsize=8,
+    fontsize=13,
     frameon=True,
-    columnspacing=1.0,
-    handletextpad=0.5,
-    borderpad=0.4,
+    columnspacing=0.8,
+    handletextpad=0.45,
+    borderpad=0.35,
 )
 
-fig.tight_layout()
+fig.subplots_adjust(left=0.09, right=0.985, top=0.86, bottom=0.34)
 fig.savefig(OUT_PDF, bbox_inches="tight")
 plt.close(fig)
 

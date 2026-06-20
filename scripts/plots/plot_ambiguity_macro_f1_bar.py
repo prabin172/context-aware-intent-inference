@@ -12,6 +12,8 @@ from sklearn.metrics import accuracy_score, f1_score
 plt.rcParams["font.family"] = "serif"
 plt.rcParams["font.serif"] = ["Times New Roman", "Times", "DejaVu Serif"]
 plt.rcParams["mathtext.fontset"] = "stix"
+plt.rcParams["pdf.fonttype"] = 42
+plt.rcParams["ps.fonttype"] = 42
 
 REPORT_DIR = Path("docs/experiment_reports/final_method_comparison")
 OUT_PDF = REPORT_DIR / "figure9_ambiguity_macro_f1.pdf"
