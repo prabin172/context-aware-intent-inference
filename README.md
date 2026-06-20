@@ -6,6 +6,23 @@ This codebase supports the experiments reported in:
 
 **Bayesian Belief Fusion for Intent Inference via Egocentric Vision and Gesture Recognition**
 
+## Publication
+
+This work has been accepted to the **2026 IEEE International Conference on Robot and Human Interactive Communication (RO-MAN)**.
+
+Full proceedings citation, page numbers, and DOI will be added when available.
+
+Preliminary citation:
+
+> P. Timilsina and T. Higgins, “Bayesian Belief Fusion for Intent Inference via Egocentric Vision and Gesture Recognition,” accepted to the 2026 IEEE International Conference on Robot and Human Interactive Communication (RO-MAN), 2026.
+
+## Maintainer
+
+**Prabin Timilsina**  
+RTHM Lab  
+FAMU-FSU College of Engineering  
+Contact: ptimilsina@eng.famu.fsu.edu
+
 ## Overview
 
 The pipeline contains four main components:
@@ -28,7 +45,7 @@ The raw RGB-D and motion-capture data are not included in this repository due to
 
 To request access to the data, please contact:
 
-    ptimilsina@famu.fsu.edu
+    ptimilsina@eng.famu.fsu.edu
 
 After receiving the data, place it under the local `data/` directory as described below.
 
@@ -76,44 +93,40 @@ Run the components in the following order.
 
 This runs the GR leave-one-subject-out training, fine-tuning, and inference pipeline.
 
-### 2. 2D Mapping / Proximity Extraction
-
-    scripts/run_2d_mapping_full_pipeline_all_sessions.sh
-
-This runs object-depth extraction and proximity mapping for all sessions.
-
-### 3. Bayesian Fusion
-
-    scripts/run_final_yolov8lFT_bf_pipeline.sh
-
-This combines GR outputs with proximity evidence to generate Bayesian Fusion predictions.
-
-### 4. End-to-End Transformer
+### 2. End-to-End Transformer
 
     scripts/run_e2e_transformer_full_pipeline_all_subjects.sh
 
 This runs the E2E leave-one-subject-out training, fine-tuning, and inference pipeline.
 
-### 5. Final Evaluation
+### 3. Proximity Mapping and Bayesian Fusion
+
+    scripts/run_final_yolov8lFT_bf_pipeline.sh
+
+This runs the final YOLOv8lFT object-detection/proximity pipeline and Bayesian Fusion evaluation. It performs YOLO + depth extraction, object-position extraction, proximity mapping, Bayesian Fusion inference, and BF evaluation.
+
+### 4. Final Evaluation
 
     scripts/run_final_evaluation.sh
 
-This generates the final method-comparison outputs under:
+This generates the final paper-facing evaluation summary:
 
-    docs/experiment_reports/final_method_comparison/
+    docs/experiment_reports/final_method_comparison/final_evaluation_results.txt
 
-### 6. Final Figures
+The summary includes the reported accuracy, macro-F1, weighted-F1, statistical tests, early prediction lead time, ambiguity analysis, and conditional switching results.
+
+### 5. Final Figures
 
     scripts/run_final_plots.sh
 
-### 7. Final Statistical Tests
+This regenerates the final paper figures under:
 
-    scripts/run_final_stats.sh
+    docs/experiment_reports/final_method_comparison/
 
 ## Outputs
 
-Generated prediction outputs are written locally under `results/` and are ignored by Git.
+Generated prediction outputs are written locally under `results/` and are ignored by Git. These files are required by downstream evaluation and plotting scripts, but are not pushed to GitHub.
 
-Selected compact report files and final figures are tracked under:
+Selected compact report files, final evaluation summaries, and final figures are tracked under:
 
     docs/experiment_reports/

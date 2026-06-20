@@ -1,26 +1,41 @@
 #!/usr/bin/env python3
 
 from pathlib import Path
+
 import pandas as pd
 import matplotlib.pyplot as plt
+from matplotlib.text import Text
 from scipy.stats import ttest_rel, wilcoxon
 
 plt.rcParams["font.family"] = "serif"
 plt.rcParams["font.serif"] = ["Times New Roman", "Times", "DejaVu Serif"]
 plt.rcParams["mathtext.fontset"] = "stix"
+plt.rcParams["pdf.fonttype"] = 42
+plt.rcParams["ps.fonttype"] = 42
 
-INPUT_CSV = Path("docs/experiment_reports/final_method_comparison/final_paired_all_methods_lead_time.csv")
-OUT_DIR = Path("docs/experiment_reports/final_method_comparison")
-OUT_DIR.mkdir(parents=True, exist_ok=True)
+REPORT_DIR = Path("docs/experiment_reports/final_method_comparison")
+INPUT_CSV = REPORT_DIR / "final_early_prediction_lead_time.csv"
+OUT_PDF = REPORT_DIR / "figure7_early_prediction_boxplot.pdf"
 
-OUT_PNG = OUT_DIR / "figure7_early_prediction_boxplot.png"
-OUT_PDF = OUT_DIR / "figure7_early_prediction_boxplot.pdf"
+lead = pd.read_csv(INPUT_CSV)
 
-df = pd.read_csv(INPUT_CSV).dropna(subset=["GR_lead", "BF_lead", "E2E_lead"])
+valid = lead[
+    (lead["final_prediction_correct"] == True)
+    & lead["prediction_lead_time_ms"].notna()
+].copy()
 
-gr = df["GR_lead"]
-bf = df["BF_lead"]
-e2e = df["E2E_lead"]
+paired = valid.pivot_table(
+    index=["Subject", "Session", "Global Trial", "Action_Label"],
+    columns="Method",
+    values="prediction_lead_time_ms",
+    aggfunc="first",
+).reset_index()
+
+paired = paired.dropna(subset=["GR", "BF", "E2E"]).copy()
+
+gr = paired["GR"]
+bf = paired["BF"]
+e2e = paired["E2E"]
 
 means = {
     "GR": gr.mean(),
@@ -28,13 +43,12 @@ means = {
     "E2E": e2e.mean(),
 }
 
-# Paired tests on the common successful-trial subset
 t_bf_gr = ttest_rel(bf, gr)
 t_bf_e2e = ttest_rel(bf, e2e)
 w_bf_gr = wilcoxon(bf, gr)
 w_bf_e2e = wilcoxon(bf, e2e)
 
-print("n_common_successful_trials:", len(df))
+print("n_common_successful_trials:", len(paired))
 print("GR mean lead:", means["GR"])
 print("BF mean lead:", means["BF"])
 print("E2E mean lead:", means["E2E"])
@@ -48,7 +62,7 @@ fig, ax = plt.subplots(figsize=(5.6, 3.6))
 
 bp = ax.boxplot(
     [gr, bf, e2e],
-    labels=["GR", "BF", "E2E"],
+    tick_labels=["GR", "BF", "E2E"],
     patch_artist=True,
     widths=0.5,
     showfliers=False,
@@ -82,7 +96,6 @@ ax.set_ylabel("Prediction Lead Time (ms)", fontsize=10)
 ax.tick_params(axis="both", labelsize=9)
 ax.grid(axis="y", linestyle=":", alpha=0.55)
 
-# Mean labels with white background
 for i, label in enumerate(["GR", "BF", "E2E"], start=1):
     val = means[label]
     ax.text(
@@ -100,18 +113,19 @@ def add_sig(ax, x1, x2, y, text, h=18):
     ax.plot([x1, x1, x2, x2], [y, y + h, y + h, y], lw=0.9, c="#333333")
     ax.text((x1 + x2) / 2, y + h + 4, text, ha="center", va="bottom", fontsize=9, color="#333333")
 
-# Fixed paper-style y-axis so hidden fliers do not stretch the plot
-ax.set_ylim(0, 950)
+ax.set_ylim(100, 950)
+ax.set_yticks([100, 300, 500, 700, 900])
 
-add_sig(ax, 1, 2, 805, "***")
-add_sig(ax, 2, 3, 875, "***")
+add_sig(ax, 1, 2, 845, "***")
+add_sig(ax, 2, 3, 845, "***")
 
 ax.text(0.62, 915, "*** p < 0.001", fontsize=8)
 
+for text_obj in fig.findobj(match=Text):
+    text_obj.set_fontfamily("Times New Roman")
+
 fig.tight_layout()
-fig.savefig(OUT_PNG, dpi=300, bbox_inches="tight")
 fig.savefig(OUT_PDF, bbox_inches="tight")
 
 print()
-print("Saved:", OUT_PNG)
 print("Saved:", OUT_PDF)

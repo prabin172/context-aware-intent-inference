@@ -297,15 +297,21 @@ Full generated outputs are local and ignored under:
 EOF
 
 echo
-echo "Step 8: Commit and push lightweight report"
-git add "$REPORT_DIR" scripts/run_yolo_depth_all_sessions.sh scripts/run_final_yolov8lFT_bf_pipeline.sh .gitignore
+echo "Step 8: Git commit/push disabled"
+echo "Pipeline outputs and lightweight report were generated."
+echo "Review changes manually with: git status"
 
-if git diff --cached --quiet; then
-    echo "No tracked report/script changes to commit."
-else
-    git commit -m "Add final YOLOv8lFT Bayesian fusion pipeline report"
-    git push
-fi
+# The following Git commands were used during remote unattended runs,
+# but are disabled for normal reproducible pipeline execution.
+#
+# git add "$REPORT_DIR" scripts/run_yolo_depth_all_sessions.sh scripts/run_final_yolov8lFT_bf_pipeline.sh .gitignore
+#
+# if git diff --cached --quiet; then
+#     echo "No tracked report/script changes to commit."
+# else
+#     git commit -m "Add final YOLOv8lFT Bayesian fusion pipeline report"
+#     git push
+# fi
 
 echo
 echo "============================================================"

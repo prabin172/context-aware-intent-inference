@@ -1,5 +1,0 @@
-test,comparison,statistic,p_value,p_holm
-Kruskal-Wallis,GR_vs_BF_vs_E2E,148.18612411119253,6.634252578983129e-33,
-Mann-Whitney U post-hoc with Holm correction,GR_vs_BF,200449.5,8.148988933490081e-23,1.6297977866980162e-22
-Mann-Whitney U post-hoc with Holm correction,GR_vs_E2E,191294.0,7.08950167318538e-28,2.126850501955614e-27
-Mann-Whitney U post-hoc with Holm correction,BF_vs_E2E,270424.5,0.22796844036567798,0.22796844036567798
